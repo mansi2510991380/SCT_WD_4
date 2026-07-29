@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="todo-app">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>My Tasks</h1>
+      <p>Organize your daily routine</p>
+    </header>
+
+    <!-- Input Box -->
+    <form id="todo-form" class="todo-form">
+      <input 
+        type="text" 
+        id="todo-input" 
+        placeholder="Add a new task..." 
+        autocomplete="off" 
+        required 
+      />
+      <button type="submit" class="add-btn">Add Task</button>
+    </form>
+
+    <!-- Task Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Task List Container -->
+    <ul id="todo-list" class="todo-list">
+      <!-- Tasks rendered dynamically via JS -->
+    </ul>
+
+    <!-- Footer Controls -->
+    <footer class="app-footer">
+      <span id="task-counter">0 tasks remaining</span>
+      <button id="clear-completed-btn" class="clear-btn">Clear Completed</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
